@@ -1,0 +1,84 @@
+.wrapper-box{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user ,.heart , .basket{
+    color: #fff;
+    font-size: 20px;
+    transition: .4s;
+}
+
+
+
+.user:hover{
+    color: #fe5915;
+}
+
+.heart:hover{
+    color: #fe5915;
+}
+
+.basket:hover{
+    color: #fe5915;
+}
+
+.basket-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.basket-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #FE5915;
+    color: white;
+    font-size: 15px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-btn {
+    background-color: #fe5915;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 14px;
+    border-radius: 6px;
+  }
+  
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    min-width: 120px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-menu a {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f2f2f2;
+  }
+  

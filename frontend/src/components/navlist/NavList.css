@@ -1,0 +1,14 @@
+.list{
+    display: flex;
+    gap: 30px;
+}
+
+.list li{
+    font-size: 16px;
+    color: #fff;
+    transition: .4s;
+}
+
+.list li:hover{
+    color: #fe5915;
+}

@@ -1,0 +1,298 @@
+#footer-area {
+    height: 710px;
+    width: 100%;
+    background-size: cover;
+}
+
+.footer-cards {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.footer-cardone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.message {
+    color: #fe5915;
+    font-size: 56px;
+}
+
+.footer-cardone .help {
+    font-size: 28px;
+    color: #fff;
+}
+
+.footer-cardone p {
+    font-size: 18px;
+    color: #888787;
+}
+
+.chat-button {
+    width: 130px;
+    height: 44px;
+    background: none;
+    color: #fff;
+    border: 5px solid #fff;
+    transition: .4s;
+}
+
+
+.chat-button:hover{
+    color: #fe5915;
+    border: 5px solid #fe5915;
+}
+
+.telephone-number {
+    color: #fe5915;
+    font-size: 35px;
+}
+
+.footer-input {
+    width: 350px;
+    height: 50px;
+    font-size: 15px;
+    padding-left: 20px;
+    outline: none;
+    transition: .4s;
+}
+
+
+.footer-input:hover{
+    border: 1px solid #fe5915;
+}
+
+.link-cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+
+
+.linkcard1 h1{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.linkcard1 .footerlinks{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.linkcard1 .footerlinks li{
+    color: #888787;
+    font-size: 17px;
+    transition: .4s;
+}
+
+.linkcard1 .footerlinks li:hover{
+    color: #fe5915;
+}
+
+
+.footer-icons{
+    display: flex;
+    gap: 13px;
+    margin-bottom: 60px;
+}
+
+.footer-icons .icon-div{
+    border: 2px solid #888787;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.footer-icon{
+    color: #fff;
+}
+
+.year{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.year p{
+  color: #fff;
+}
+
+/* 1024px və aşağı */
+@media (max-width: 1024px) {
+    #footer-area {
+      height: auto;
+      padding: 60px 40px;
+    }
+  
+    .footer-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      padding-top: 60px;
+    }
+  
+    .footer-cardone {
+      width: 80%;
+      gap: 15px;
+    }
+  
+    .message {
+      font-size: 48px;
+    }
+  
+    .footer-cardone .help {
+      font-size: 24px;
+    }
+  
+    .footer-cardone p {
+      font-size: 16px;
+    }
+  
+    .chat-button {
+      width: 120px;
+      height: 40px;
+      border-width: 4px;
+    }
+  
+    .telephone-number {
+      font-size: 30px;
+    }
+  
+    .footer-input {
+      width: 300px;
+      height: 45px;
+      font-size: 14px;
+      padding-left: 15px;
+    }
+  
+    .link-cards {
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 60px;
+    }
+  
+    .linkcard1 h1 {
+      font-size: 18px;
+    }
+  
+    .linkcard1 .footerlinks li {
+      font-size: 15px;
+    }
+  
+    .footer-icons {
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+  
+    .footer-icons .icon-div {
+      width: 36px;
+      height: 36px;
+      border-width: 1.5px;
+    }
+  
+    .year {
+      margin-top: 20px;
+    }
+  
+    .year p {
+      font-size: 14px;
+    }
+  }
+  
+  /* 600px və aşağı */
+  @media (max-width: 600px) {
+    #footer-area {
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .footer-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding-top: 40px;
+    }
+  
+    .footer-cardone {
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .message {
+      font-size: 38px;
+    }
+  
+    .footer-cardone .help {
+      font-size: 20px;
+    }
+  
+    .footer-cardone p {
+      font-size: 14px;
+    }
+  
+    .chat-button {
+      width: 110px;
+      height: 38px;
+      border-width: 3px;
+    }
+  
+    .telephone-number {
+      font-size: 26px;
+    }
+  
+    .footer-input {
+      width: 100%;
+      max-width: 280px;
+      height: 40px;
+      font-size: 13px;
+      padding-left: 12px;
+    }
+  
+    .link-cards {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 40px;
+    }
+  
+    .linkcard1 h1 {
+      font-size: 16px;
+    }
+  
+    .linkcard1 .footerlinks li {
+      font-size: 14px;
+    }
+  
+    .footer-icons {
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+  
+    .footer-icons .icon-div {
+      width: 32px;
+      height: 32px;
+      border-width: 1.2px;
+    }
+  
+    .year {
+      margin-top: 15px;
+    }
+  
+    .year p {
+      font-size: 12px;
+    }
+  }
+  

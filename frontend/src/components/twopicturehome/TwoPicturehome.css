@@ -1,0 +1,130 @@
+.twocards {
+    display: flex;
+}
+
+.twocardkids,
+.twocardaccessories {
+    width: 875px;
+    height: 499px;
+    background-size: 120%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    transition: background-position 0.6s ease, transform 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 90px;
+}
+
+
+.twocardkids:hover,
+.twocardaccessories:hover {
+    background-position: right center;
+}
+
+.twocardkids h1 {
+    font-size: 35px;
+}
+
+.twocardaccessories h1 {
+    font-size: 35px;
+}
+
+.twocardkids p {
+    color: #888787;
+}
+
+.twocardaccessories p {
+    color: #888787;
+}
+
+.twocardkidsbutton {
+    width: 130px;
+    height: 50px;
+    background: none;
+    border: 4px solid #fe5915;
+    transition: .4s;
+}
+
+.twocardkidsbutton:hover {
+    background-color: #fe5915;
+    color: #fff;
+}
+
+/* 675px .twocardkids,
+.twocardaccessories */
+
+/* 1024px və aşağı */
+@media (max-width: 1024px) {
+    .twocards {
+      flex-direction: row; /* Yan yana göstər */
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .twocardkids,
+    .twocardaccessories {
+      width: 48%; /* İki kart yan yana */
+      height: auto;
+      padding: 80px 50px;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .twocardkids h1,
+    .twocardaccessories h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .twocardkids p,
+    .twocardaccessories p {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    .twocardkidsbutton {
+      width: 130px;
+      height: 50px;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* 600px və aşağı */
+  @media (max-width: 600px) {
+    .twocards {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+  
+    .twocardkids,
+    .twocardaccessories {
+      width: 90%;
+      height: auto;
+      padding: 60px 30px;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .twocardkids h1,
+    .twocardaccessories h1 {
+      font-size: 26px;
+      text-align: center;
+    }
+  
+    .twocardkids p,
+    .twocardaccessories p {
+      font-size: 15px;
+      text-align: center;
+    }
+  
+    .twocardkidsbutton {
+      width: 120px;
+      height: 45px;
+      font-size: 14px;
+      margin: 0 auto;
+    }
+  }
+  

@@ -1,0 +1,59 @@
+
+  .experiencebox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width:750px;
+    height: auto;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .experienceimage-two {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .experiencetext{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+  }
+
+  .bicyclingexperience{
+    font-size: 60px;
+  }
+
+  .whoweare{
+    color: #fe5915;
+  }
+
+  .shopabout{
+    font-size: 18px;
+    color: #888787;
+  }
+
+  .aboutcontact{
+    height: 50px;
+    width: 150px;
+    background-color: #fe5915;
+    color: #fff;
+    border: none;
+    transition: .4s;
+  }
+
+  .aboutcontact:hover{
+    background-color: #000;
+  }

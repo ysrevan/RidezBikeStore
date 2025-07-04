@@ -1,0 +1,49 @@
+#contactemail{
+    padding-bottom: 100px;
+}
+
+.contactemailbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.emailimagebox{
+    width: 411px;
+    height: 694px;
+}
+
+.sendmessage{
+    font-size: 55px;
+}
+
+.emailtext{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.emailtext input{
+    height: 50px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.emailtext textarea{
+   resize: none;
+   font-size: 15px;
+   padding-left: 10px;
+   padding-top: 10px;
+}
+
+.submitbtn{
+    width:130px;
+    height: 50px;
+    background-color: #fe5915;
+    color: #fff;
+    border: none;
+    transition: .4s;
+}
+
+.submitbtn:hover{
+    background-color: #000;
+}

@@ -1,0 +1,130 @@
+#wishlist {
+    padding: 40px 0;
+  }
+  
+  .wishlistcardbox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .wishlistcard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .wishlistcard img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .wishlistinfo {
+    flex: 1;
+  }
+  
+  .wishlistinfo h3 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+  }
+  
+  .wishlistinfo p {
+    margin: 4px 0;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .wishlistactions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .wishlistactions button {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .wishlistactions span {
+    font-size: 16px;
+    width: 24px;
+    text-align: center;
+  }
+  
+  .removebtn {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .removebtn:hover {
+    background-color: #d9363e;
+  }
+  
+  .totalpricebox {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .totalpricebox h2 {
+    font-size: 28px;
+    color: #222;
+  }
+  
+
+  .clearwishlist{
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .clearwishlist:hover {
+    background-color: #d9363e;
+  }
+
+  .emptywishlistbox {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .emptywishlistbox .emptywishlist {
+   font-size: 200px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+  
+  .emptywishlistbox p {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  

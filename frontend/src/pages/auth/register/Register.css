@@ -1,0 +1,78 @@
+.register-container {
+    width: 320px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  .file-input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    background-color: white;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  .file-input:focus {
+    border-color: #fe5915;
+    outline: none;
+  }
+  
+  .file-input {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #fff8f4;
+    font-size: 14px;
+  }
+  
+  .image-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .register-btn {
+    padding: 12px;
+    background-color: #fe5915;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .register-btn:hover {
+    background-color: #cc480f;
+  }
+  
+  .error {
+    color: red;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  

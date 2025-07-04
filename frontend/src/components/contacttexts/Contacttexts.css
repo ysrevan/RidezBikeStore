@@ -1,0 +1,57 @@
+#contacttexts{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contacttextsbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.textcardone{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textcardone .getknow{
+   color: #fe5915;
+}
+
+.textcardone h1{
+    font-size: 35px;
+}
+
+.textcardtwo{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.textcardthree{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.socialprofile{
+    display: flex;
+    gap: 20px;
+}
+
+.profilebox{
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: .4s;
+}
+
+.profilebox:hover{
+   background-color: #fe5915;
+}

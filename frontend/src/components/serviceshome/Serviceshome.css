@@ -1,0 +1,164 @@
+#servicehome {
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 230px;
+}
+
+.servicehomebox .ride{
+    color: #fe5915;
+}
+
+.servicehomebox h1{
+    font-size: 50px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.twotextone{
+    display: flex;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+.textone,.texttwo{
+    width: 300px;
+}
+
+.textone h2{
+   color: #fe5915;
+   margin-bottom: 20px;
+}
+
+.texttwo h2{
+    color: #fe5915;
+    margin-bottom: 20px;
+ }
+ 
+ .textthree h2{
+    color: #fe5915;
+    margin-bottom: 20px;
+}
+
+.textfour h2{
+    color: #fe5915;
+    margin-bottom: 20px;
+}
+
+.textone ,.texttwo,.textthree,.textfour p{
+  color: #888787;
+  font-size: 18px;
+}
+
+.twotexttwo{
+    display: flex;
+    margin-top: 80px;
+    gap: 40px;
+}
+
+.textthree,.textfour{
+    width: 300px;
+}
+
+.exploreproducts{
+    height: 50px;
+    width: 200px;
+    margin-top: 60px;
+    color: #fff;
+    background-color: #fe5915;
+    border: none;
+    transition: .4s;
+}
+
+.exploreproducts:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+@media (max-width: 1024px) {
+    #servicehome {
+      height: auto;
+      padding-top: 180px;
+      padding-left: 40px;
+      padding-right: 40px;
+      text-align: center;
+    }
+  
+    .servicehomebox h1 {
+      font-size: 42px;
+      margin-top: 25px;
+    }
+  
+    .twotextone,
+    .twotexttwo {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 60px;
+    }
+  
+    .textone,
+    .texttwo,
+    .textthree,
+    .textfour {
+      width: 45%;
+    }
+  
+    .textone p,
+    .texttwo p,
+    .textthree p,
+    .textfour p {
+      font-size: 18px;
+    }
+  
+    .exploreproducts {
+      width: 200px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+  
+  /* 600px və aşağı */
+  @media (max-width: 600px) {
+    #servicehome {
+      height: auto;
+      padding-top: 130px;
+      padding-left: 25px;
+      padding-right: 25px;
+      text-align: center;
+    }
+  
+    .servicehomebox h1 {
+      font-size: 34px;
+      margin-top: 20px;
+    }
+  
+    .twotextone,
+    .twotexttwo {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 50px;
+    }
+  
+    .textone,
+    .texttwo,
+    .textthree,
+    .textfour {
+      width: 90%;
+    }
+  
+    .textone p,
+    .texttwo p,
+    .textthree p,
+    .textfour p {
+      font-size: 16px;
+    }
+  
+    .exploreproducts {
+      width: 180px;
+      height: 45px;
+      font-size: 15px;
+    }
+  }
+  

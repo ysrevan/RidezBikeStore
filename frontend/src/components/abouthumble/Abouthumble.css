@@ -1,0 +1,34 @@
+#abouthumble{
+    margin-bottom: 100px;
+}
+
+.humblebox{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.humbleimagebox{
+    width: 710px;
+    height: 480px;
+}
+
+.humbletext{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.story{
+    color: #fe5915;
+}
+
+.humblebeginning{
+    font-size: 60px;
+}
+
+.hill{
+    color: #888787;
+    font-size: 18px;
+}

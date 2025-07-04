@@ -1,0 +1,125 @@
+#aboutsupport{
+    padding-bottom: 100px;
+}
+
+.supporttext{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.supportbox{
+    display: flex;
+    gap: 30px;
+}
+
+.supportcardone{
+    width: 307px;
+    height: 431px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+
+.supportcardtwo{
+    width: 307px;
+    height: 431px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.needsupport{
+    color: #fe5915;
+    margin-bottom: 20px;
+}
+
+.specialservices{
+    font-size: 50px;
+}
+
+.aboutuser{
+    font-size: 70px;
+}
+
+.aboutbicycle{
+    font-size: 100px;
+}
+
+.aboutlearnnmore{
+    height: 50px;
+    width: 150px;
+    background-color: #fe5915;
+    border: none;
+    color: #fff;
+    transition: .4s;
+}
+
+.aboutlearnnmore:hover{
+   background-color: #000;
+}
+
+.supportimage {
+    position: relative;
+    width: 720px;     
+    height: 431px;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.supportimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    transition: transform 0.4s ease;
+}
+
+.supportimage:hover img {
+    transform: scale(1.1); 
+}
+
+
+.supportimagetext{
+    position: absolute;
+    bottom: 160px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.onefull{
+    font-size: 35px;
+    color: #fff;
+}
+
+.takeoff{
+    font-size: 35px;
+    color: #fe5915;
+}
+
+.sprint{
+    color: #fff;
+}
+
+.setdetails{
+    height: 50px;
+    width: 150px;
+    background-color: #fe5915;
+    border: none;
+    color: #fff;
+    transition: .4s;
+}
+
+.setdetails:hover{
+    background-color: #000;
+}

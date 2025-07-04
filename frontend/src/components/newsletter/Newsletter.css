@@ -1,0 +1,143 @@
+#newsletter-section {
+    position: relative;
+    height: 600px; 
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; 
+    padding-left: 50px; 
+    box-sizing: border-box;
+  }
+  
+  .overlay-image-left {
+    max-width: 387px; 
+    width: 100%;
+  }
+  
+  .overlay-image-left img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .newsletterarea{
+    display: flex;
+    align-items: center;
+    gap: 230px;
+  }
+
+  .righttext{
+    text-align: center;
+  }
+
+  .newsletterparagraph{
+    color: #fe5915;
+  }
+
+  .newsletterheader{
+    font-size: 50px;
+  }
+
+  .newsletterinput{
+    margin-top: 30px;
+   
+  }
+
+  .newsletteremail{
+    height: 50px;
+    width: 400px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+  }
+
+  .subscribebutton{
+    height: 50px;
+    width: 150px;
+    background-color: #fe5915;
+    border: none;
+    color: #fff;
+    transition: .4s;
+  }
+
+  .subscribebutton:hover{
+    background-color: #000;
+  }
+
+  /* 1024px və aşağı */
+@media (max-width: 1024px) {
+  #newsletter-section {
+    height: auto;
+    flex-direction: row;
+    padding: 50px 40px;
+    text-align: left;
+  }
+
+  .newsletterarea {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .overlay-image-left {
+    max-width: 350px;
+  }
+
+  .newsletterheader {
+    font-size: 42px;
+  }
+
+  .newsletteremail {
+    width: 350px;
+  }
+
+  .subscribebutton {
+    width: 150px;
+    margin-top: 0;
+  }
+
+  .newsletterinput {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* 600px və aşağı */
+@media (max-width: 600px) {
+  #newsletter-section {
+    height: auto;
+    flex-direction: column;
+    padding: 35px 25px;
+    text-align: center;
+  }
+
+  .newsletterarea {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .overlay-image-left {
+    max-width: 280px;
+  }
+
+  .newsletterheader {
+    font-size: 32px;
+  }
+
+  .newsletteremail {
+    width: 280px;
+  }
+
+  .subscribebutton {
+    width: 140px;
+    margin-top: 10px;
+  }
+
+  .newsletterinput {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}

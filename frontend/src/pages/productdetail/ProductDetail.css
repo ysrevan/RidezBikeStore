@@ -1,0 +1,101 @@
+#productdetail {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+  }
+  
+  .detail-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+  }
+  
+  .detail-image {
+    flex: 1 1 400px;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .detail-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .detail-text {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .detail-text h1 {
+    font-size: 32px;
+    color: #222;
+  }
+  
+  .detail-text p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .detail-text .detailprice {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fe5915;
+  }
+  
+  .detailwishlistheart{
+    position: absolute;
+    top: 55px;
+    left: 500px;
+    font-size: 20px;
+  }
+
+  .detailactions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .detailadd{
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    border: 2px solid #fe5915;
+    background-color: #fe5915;
+    border-radius: 7px;
+    transition: .4s;
+    color: #fff;
+  }
+
+  .detailadd:hover{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000
+  }
+
+  .detailcount{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .detailcount button{
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+    border: 2px solid #fe5915;
+    background-color: #fe5915;
+    border-radius: 7px;
+    color: #fff;
+  }

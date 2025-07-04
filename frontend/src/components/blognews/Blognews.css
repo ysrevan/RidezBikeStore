@@ -1,0 +1,46 @@
+#blognew{
+    padding: 80px 0;
+}
+
+.blognewsbox{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.blognewimage{
+    width: 931px;
+    height: 562px;
+    margin-bottom: 20px;
+}
+
+.blognewtext{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 931px;
+}
+
+.new-title{
+    font-size: 35px;
+    transition: .4s;
+}
+
+.new-title:hover{
+    color: #fe5915;
+}
+
+.new-date{
+    transition: .4s;
+    color: #888787;
+}
+
+.new-date:hover{
+    color: #fe5915;
+}
+
+.new-desc{
+    color: #888787;
+}

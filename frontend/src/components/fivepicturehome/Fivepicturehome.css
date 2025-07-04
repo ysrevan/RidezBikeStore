@@ -1,0 +1,56 @@
+#fivepicturehome{
+    height: 345px;
+    background-color: #fe5915;
+    display: flex;
+    align-items: center;
+}
+
+.fivepicturecards{
+    display: flex;
+}
+
+.brandimgbox{
+    width: 265px;
+    height: 130px;
+}
+
+/* 1024px və aşağı */
+@media (max-width: 1024px) {
+    #fivepicturehome {
+      height: auto; /* hündürlüyü avtomatik et */
+      padding: 30px 20px;
+      justify-content: center;
+    }
+  
+    .fivepicturecards {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .brandimgbox {
+      width: 220px;
+      height: 110px;
+    }
+  }
+  
+  /* 600px və aşağı */
+  @media (max-width: 600px) {
+    #fivepicturehome {
+      height: auto;
+      padding: 20px 15px;
+      flex-direction: column;
+    }
+  
+    .fivepicturecards {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  
+    .brandimgbox {
+      width: 180px;
+      height: 90px;
+    }
+  }
+  
