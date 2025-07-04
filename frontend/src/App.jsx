@@ -14,6 +14,8 @@ import ProductDetail from './pages/productdetail/ProductDetail'
 import { ToastContainer } from 'react-toastify'
 import Login from './pages/auth/login/Login'
 import Register from './pages/auth/register/Register'
+import ForgotPassword from './pages/auth/forgotpassword/ForgotPassword'
+import Resetpassword from './pages/auth/resetpassword/Resetpassword'
 
 function App() {
   const router = createBrowserRouter([
@@ -65,6 +67,14 @@ function App() {
         {
           path: '/register',
           element: <Register />
+        },
+        {
+          path: "/forgotpassword",
+          element: <ForgotPassword />,
+        },
+        {
+          path: "/resetpassword",
+          element: <Resetpassword />,
         },
       ]
     }

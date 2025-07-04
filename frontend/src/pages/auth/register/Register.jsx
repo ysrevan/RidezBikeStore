@@ -6,6 +6,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from '../../../components/utils/Button';
+import { Link } from 'react-router-dom';
 
 function Register() {
   const submitForm = async (values, action) => {
@@ -115,7 +116,9 @@ function Register() {
         <Button className="register-btn" type="submit">Register</Button>
       </form>
 
-    
+      <p className="text-center mt-4">
+        Already have an account? <Link to="/login">Login</Link>
+      </p>
     </div>
   );
 }

@@ -35,6 +35,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../../redux/userSlice';
 import axios from 'axios';
+import {toast} from 'react-toastify'
 
 function Wrapper() {
   const baseUrl = "http://localhost:5000/auth"
@@ -44,7 +45,7 @@ function Wrapper() {
   const {user} = useSelector((state)=>state.user)
   const dispatch = useDispatch()
   const handleLogout = async() =>{
-    const res = await axios.get(`${baseUrl}/logout`)
+    const res = await axios.post(`${baseUrl}/logout`)
 
     dispatch(setUser(null))
 
@@ -61,7 +62,7 @@ function Wrapper() {
         className="user-dropdown"
         onClick={() => setShowDropdown(!showDropdown)}
       >
-        <button className="user-btn">Account</button>
+        <button className="user-btn">{user ? user.username : "Account"}</button>
         {showDropdown && (
           <div className="dropdown-menu">
             {

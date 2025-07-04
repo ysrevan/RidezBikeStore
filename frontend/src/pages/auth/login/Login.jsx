@@ -8,7 +8,7 @@ import { loginschema } from '../../../schemas/LoginSchema';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../redux/userSlice';
 import Button from '../../../components/utils/Button';
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 function Login() {
 
@@ -61,34 +61,32 @@ function Login() {
     <div className="register-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit} noValidate>
-      
+  <input
+    type="text"
+    name="username"
+    placeholder="Username"
+    value={values.username}
+    onChange={handleChange}
+    onBlur={handleBlur}
+  />
+  {errors.username && touched.username && <div className="error">{errors.username}</div>}
 
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={values.username}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.username && touched.username && <div className="error">{errors.username}</div>}
+  <input
+    type="password"
+    name="password"
+    placeholder="Password"
+    value={values.password}
+    onChange={handleChange}
+    onBlur={handleBlur}
+  />
+  {errors.password && touched.password && <div className="error">{errors.password}</div>}
 
-      
+  <p className="forgot-link">
+    <Link to="/forgotpassword">Forgot your password?</Link>
+  </p>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={values.password}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.password && touched.password && <div className="error">{errors.password}</div>}
-
-       
-
-        <Button className="login-btn" type="submit">Login</Button>
-      </form>
+  <Button className="login-btn" type="submit">Login</Button>
+</form>
 
     
     </div>
