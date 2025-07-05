@@ -15,30 +15,63 @@ function Login() {
     const baseUrl = "http://localhost:5000/auth";
     const dispatch = useDispatch()
     const navigate = useNavigate()
-  const submitForm = async (values, action) => {
+
+
+  // const submitForm = async (values, action) => {
   
  
 
-    try {
+  //   try {
 
        
 
-      const res = await axios.post(`${baseUrl}/login`, values);
+  //     const res = await axios.post(`${baseUrl}/login`, values);
 
 
+  //     if (res.status === 200) {
+  //       dispatch(setUser(res.data))
+  //       toast.success("Login successfully!"); 
+  //     }else{
+  //       toast.error("Login failed")
+  //     }
+
+  //     action.resetForm();
+  //     navigate("/")
+  //   } catch (err) {
+  //     toast.error(`${err.response?.data?.message || "Xəta baş verdi!"}`);
+  //   }
+  // };
+
+  const submitForm = async (values, action) => {
+    try {
+      const isAdmin = values.username === "RidezAdmin"; 
+      const endpoint = isAdmin
+        ? `${baseUrl}/admin/login`
+        : `${baseUrl}/login`;
+      
+      const res = await axios.post(endpoint, values, { withCredentials: true });
+      
+  
       if (res.status === 200) {
-        dispatch(setUser(res.data))
-        toast.success("Login successfully!"); 
-      }else{
-        toast.error("Login failed")
+        dispatch(setUser(res.data));
+        toast.success("Login successfully!");
+  
+        
+        if (isAdmin) {
+          navigate("/admin");
+        } else {
+          navigate("/");
+        }
+      } else {
+        toast.error("Login failed");
       }
-
+  
       action.resetForm();
-      navigate("/")
     } catch (err) {
       toast.error(`${err.response?.data?.message || "Xəta baş verdi!"}`);
     }
   };
+  
 
   const {
     values,
