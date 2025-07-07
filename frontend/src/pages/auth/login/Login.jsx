@@ -17,30 +17,7 @@ function Login() {
     const navigate = useNavigate()
 
 
-  // const submitForm = async (values, action) => {
-  
  
-
-  //   try {
-
-       
-
-  //     const res = await axios.post(`${baseUrl}/login`, values);
-
-
-  //     if (res.status === 200) {
-  //       dispatch(setUser(res.data))
-  //       toast.success("Login successfully!"); 
-  //     }else{
-  //       toast.error("Login failed")
-  //     }
-
-  //     action.resetForm();
-  //     navigate("/")
-  //   } catch (err) {
-  //     toast.error(`${err.response?.data?.message || "Xəta baş verdi!"}`);
-  //   }
-  // };
 
   const submitForm = async (values, action) => {
     try {
@@ -49,22 +26,22 @@ function Login() {
         ? `${baseUrl}/admin/login`
         : `${baseUrl}/login`;
       
-      const res = await axios.post(endpoint, values, { withCredentials: true });
+        const res = await axios.post(endpoint, values, { withCredentials: true });
+
       
-  
-      if (res.status === 200) {
-        dispatch(setUser(res.data));
-        toast.success("Login successfully!");
-  
+        if (res.status === 200) {
+          dispatch(setUser(res.data.existUser));  
+          toast.success("Login successfully!");
         
-        if (isAdmin) {
-          navigate("/admin");
+          if (isAdmin) {
+            navigate("/admin");
+          } else {
+            navigate("/");
+          }
         } else {
-          navigate("/");
+          toast.error("Login failed");
         }
-      } else {
-        toast.error("Login failed");
-      }
+        
   
       action.resetForm();
     } catch (err) {

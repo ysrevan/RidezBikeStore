@@ -62,7 +62,8 @@ function Wrapper() {
         className="user-dropdown"
         onClick={() => setShowDropdown(!showDropdown)}
       >
-        <button className="user-btn">{user ? user.username : "Account"}</button>
+      <button className="user-btn">{user ? (user.username || user.name || "User") : "Account"}</button>
+
         {showDropdown && (
           <div className="dropdown-menu">
             {

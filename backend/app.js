@@ -8,7 +8,8 @@ import userRouter from "./src/routes/UserRouter.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import adminRouter from "./src/routes/AdminRouter.js";
-
+import basketRouter from "./src/routes/BasketRouter.js"
+import wishlistRouter from "./src/routes/WishlistRouter.js"
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -28,6 +29,8 @@ app.use("/auth", userRouter);
 app.use("/api/profile", userRouter);
 app.use("/images", express.static("src/images"));
 app.use("/auth/admin",adminRouter)
+app.use("/api/basket", basketRouter)
+app.use("/api/wishlist", wishlistRouter);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);

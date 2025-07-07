@@ -3,10 +3,12 @@ import { getProducts, searchProduct } from '../../redux/shopproductSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import './Shopproducts.css'
 import Button from '../utils/Button'
-import { addBasket } from '../../redux/basketSlice'
-import { FaHeart } from "react-icons/fa6";
-import { addWishlist } from '../../redux/wishlistSlice'
+import { addBasket, fetchBasket } from '../../redux/basketSlice'
+import { addWishlist, removeWishlist } from '../../redux/wishlistSlice'
+import { FaHeart } from "react-icons/fa6"
 import { useNavigate } from 'react-router-dom'
+
+
 function Shopproducts() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -45,10 +47,18 @@ function Shopproducts() {
     return (
       <div className='product-card' key={product._id}  onClick={() => navigate(`/productdetail/${product._id}`)}>
         <FaHeart
-          onClick={(e) => {e.stopPropagation(),dispatch(addWishlist(product))}}
-          style={{ color: existProduct ? "red" : "black" }}
-          className='shopwishlistheart'
-        />
+  onClick={async (e) => {
+    e.stopPropagation()
+    if (existProduct) {
+      await dispatch(removeWishlist(product)).unwrap()
+    } else {
+      await dispatch(addWishlist(product)).unwrap()
+    }
+  }}
+  style={{ color: existProduct ? "red" : "black" }}
+  className='shopwishlistheart'
+/>
+
         <div className="productcard-image">
           <img src={`http://localhost:5000/${product.image}`} alt="" />
         </div>
@@ -56,7 +66,16 @@ function Shopproducts() {
           <h2 className="productcard-title">{product.title.slice(0, 18)}...</h2>
           <p className='productcard-category'>Category: {product.category}</p>
           <p className='productcard-price'>${product.price}</p>
-          <Button className='add-btn' onClick={(e) => {e.stopPropagation(),dispatch(addBasket(product))}}>Add To Cart</Button>
+          <Button  type="button"
+  className='add-btn'
+  onClick={async (e) => {
+    e.stopPropagation()
+    await dispatch(addBasket(product)).unwrap()
+    await dispatch(fetchBasket()).unwrap()  // ← bunu əlavə etdik
+  }}
+>
+  Add To Cart
+</Button>
         </div>
       </div>
     )

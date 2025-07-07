@@ -1,0 +1,21 @@
+#admin{
+    padding: 90px 0;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+tr,th,td{
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.adminimagebox{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}

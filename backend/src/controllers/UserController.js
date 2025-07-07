@@ -7,6 +7,7 @@ import { recieveMail } from "../middleware/mailer/mailer.js";
 import jwt from "jsonwebtoken";
 import ResetValidationSchema from "../middleware/validation/ResetValidation.js";
 import ForgotValidationSchema from "../middleware/validation/ForgotValidation.js";
+import Basket from "../models/BasketModel.js";
 
 export const register = async (req, res) => {
   try {
@@ -14,7 +15,7 @@ export const register = async (req, res) => {
     const { filename } = req.file || {};
 
     if (!filename) {
-      return res.status(400).json({ message: "Şəkil yüklənməyib" });
+      return res.status(400).json({ message: "Image not uploaded" });
     }
 
     const { error } = registerValidationSchema.validate(req.body);
@@ -24,7 +25,7 @@ export const register = async (req, res) => {
 
     const existUser = await user.findOne({ email });
     if (existUser) {
-      return res.status(400).json({ message: "Bu email artıq qeydiyyatdan keçib" });
+      return res.status(400).json({ message: "This email is already registered." });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -96,10 +97,31 @@ export const login = async (req, res) => {
   });
 };
 
-export const logout = (req, res) => {
-  res.clearCookie("token");
-  return res.status(200).json({ message: "User logged out successfully" });
-};
+import Wishlist from "../models/WishlistModel.js" // bunu yuxarıda import et
+
+export const logout = async (req, res) => {
+  try {
+    const token = req.cookies.token;
+    console.log("LOGOUT TOKEN:", token);  // <--- bunu yaz
+
+    if (token) {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      console.log("DECODED ID:", decoded.id);  // <--- bunu da yaz
+
+      await Basket.findOneAndUpdate({ user: decoded.id }, { products: [] });
+      await Wishlist.findOneAndUpdate({ user: decoded.id }, { products: [] });
+    } else {
+      console.log("No token found in cookies");
+    }
+
+    res.clearCookie("token");
+    return res.status(200).json({ message: "User logged out successfully" });
+  } catch (error) {
+    return res.status(500).json({ message: "Logout error" });
+  }
+}
+
+
 
 export const forgotPassword = async (req, res) => {
   try {
