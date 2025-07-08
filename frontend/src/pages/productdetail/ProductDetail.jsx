@@ -45,13 +45,18 @@ function ProductDetail() {
         <div className="mycontainer">
           <div className='detail-box'>
             <FaHeart
-              onClick={(e) => {
+              onClick={async (e) => {
                 e.stopPropagation();
-                dispatch(addWishlist(product));
+                if (existProduct) {
+                  await dispatch(removeWishlist(product)).unwrap();
+                } else {
+                  await dispatch(addWishlist(product)).unwrap();
+                }
               }}
               style={{ color: existProduct ? "red" : "black" }}
               className='detailwishlistheart'
             />
+
             <div className="detail-image">
               <img src={`http://localhost:5000/${product.image}`} alt={product.title} />
             </div>
@@ -70,9 +75,9 @@ function ProductDetail() {
                     } else {
                       await dispatch(addBasket(product)).unwrap()
                     }
-                    await dispatch(fetchBasket()).unwrap()  // ← bunu əlavə etdik
+                    await dispatch(fetchBasket()).unwrap()  
                   }}
-                  
+
                 >
                   Add To Cart
                 </Button>

@@ -49,6 +49,31 @@ export const deleteProduct = async (req, res) => {
   }
 };
 
+export const editProduct = async (req, res) => {
+  const { id } = req.params;
+  const { title, category, description, price } = req.body;
+
+  try {
+    const productToUpdate = await product.findById(id);
+    if (!productToUpdate) return res.status(404).json({ message: "Product not found" });
+
+    if (req.file) {
+      productToUpdate.image = `images/${req.file.filename}`.replace(/\\/g, "/");
+    }
+
+    productToUpdate.title = title;
+    productToUpdate.category = category;
+    productToUpdate.description = description;
+    productToUpdate.price = price;
+
+    await productToUpdate.save();
+    return res.status(200).json(productToUpdate);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+}
+
+
 export const searchProduct = async (req, res) => {
   const { title } = req.params;
 

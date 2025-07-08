@@ -17,6 +17,7 @@ import Register from './pages/auth/register/Register'
 import ForgotPassword from './pages/auth/forgotpassword/ForgotPassword'
 import Resetpassword from './pages/auth/resetpassword/Resetpassword'
 import Admin from './pages/admin/Admin'
+import AdminBlog from './pages/admin/AdminBlog'
 
 function App() {
   const router = createBrowserRouter([
@@ -80,6 +81,10 @@ function App() {
         {
           path: "/admin",
           element: <Admin />,
+        },
+        {
+          path: "/adminblog",
+          element: <AdminBlog />,
         },
       ]
     }

@@ -48,3 +48,26 @@ export const addBlog = async (req, res) => {
       return res.status(500).json({ message: error.message });
     }
   };
+
+  export const editBlog = async (req, res) => {
+    const { id } = req.params;
+    const { title, date, description } = req.body;
+  
+    try {
+      const blogToUpdate = await blog.findById(id);
+      if (!blogToUpdate) return res.status(404).json({ message: "Blog not found" });
+  
+      if (req.file) {
+        blogToUpdate.image = `images/${req.file.filename}`.replace(/\\/g, "/");
+      }
+  
+      blogToUpdate.title = title;
+      blogToUpdate.date = date;
+      blogToUpdate.description = description;
+  
+      await blogToUpdate.save();
+      return res.status(200).json(blogToUpdate);
+    } catch (error) {
+      return res.status(500).json({ message: error.message });
+    }
+  };

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 let baseUrl = "http://localhost:5000/api/products"
-
+import {toast} from "react-toastify"
 const initialState = {
     products: [],
     allProducts: [],
@@ -11,6 +11,34 @@ export const getProducts = createAsyncThunk("get/products",async()=>{
     let {data} = await axios(baseUrl)
     return data
 })
+
+export const addProduct = createAsyncThunk("products/addproduct", async (formData) => {
+  const { data } = await axios.post(baseUrl, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  toast.success("Product added");
+  return data;
+});
+
+
+export const deleteProduct = createAsyncThunk("products/deleteproduct", async (id) => {
+  await axios.delete(`${baseUrl}/${id}`)
+  toast.error("Product deleted")
+  return id
+})
+
+export const editProduct = createAsyncThunk("products/editproduct", async ({ id, data }) => {
+  const res = await axios.put(`${baseUrl}/${id}`, data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  toast.success("Product edited");
+  return res.data;
+});
+
 
 export const searchProduct = createAsyncThunk(
     "product/searchProduct",
@@ -40,6 +68,22 @@ export const productSlice = createSlice({
      state.products = action.payload
      state.allProducts = action.payload
     })
+
+    builder.addCase(addProduct.fulfilled, (state, action) => {
+      state.products.push(action.payload)
+  })
+
+  builder.addCase(deleteProduct.fulfilled, (state, action) => {
+    state.products = state.products.filter((item) => item._id !== action.payload)
+
+  })
+
+  builder.addCase(editProduct.fulfilled, (state, action) => {
+    state.products = state.products.map((item) =>
+      item._id === action.payload._id ? action.payload : item
+    );
+  });
+
     builder.addCase(searchProduct.fulfilled, (state, action) => {
       state.products = action.payload;
     });
@@ -49,6 +93,6 @@ export const productSlice = createSlice({
 })
 
 
-export const {  } = productSlice.actions
+export const { extraReducers } = productSlice.actions
 
 export default productSlice.reducer
