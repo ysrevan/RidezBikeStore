@@ -1,32 +1,3 @@
-// import React from 'react'
-// import { LuUserRound } from "react-icons/lu";
-// import { IoIosHeartEmpty } from "react-icons/io";
-// import { GrBasket } from "react-icons/gr";
-// import "./Wrapper.css"
-// import { Link } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
-// function Wrapper() {
-
-//   let {basket} = useSelector((state)=>state.basket)
-  
-// let basketcount = basket.reduce((sum,item)=>sum+item.count,0)
-
-//   return (
-//     <div className='wrapper-box'>
-//         <Link to="/register"><LuUserRound  className='user'/></Link>
-//        <Link to='/wishlist'> <IoIosHeartEmpty   className='heart'/></Link>
-//        <div className="basket-wrapper">
-//        <Link to='/basket'><GrBasket   className='basket'/></Link>
-//        <span className='basket-count'>{basketcount}</span>
-//        </div>
-//     </div>
-//   )
-// }
-
-// export default Wrapper
-
-
-
 import React, { useState } from 'react'
 import { IoIosHeartEmpty } from "react-icons/io";
 import { GrBasket } from "react-icons/gr";
@@ -36,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../../redux/userSlice';
 import axios from 'axios';
 import {toast} from 'react-toastify'
+import { FaRegUser } from "react-icons/fa6";
 
 function Wrapper() {
   const baseUrl = "http://localhost:5000/auth"
@@ -55,6 +27,7 @@ function Wrapper() {
       toast.error("Logout failed")
     }
   }
+
 
   return (
     <div className='wrapper-box'>
@@ -78,6 +51,13 @@ function Wrapper() {
         )}
       </div>
 
+    
+      
+      {user && (
+        <Link to="/profile" className="user-profile-icon">
+          <FaRegUser className='user'/>
+        </Link>
+      )}
       <Link to='/wishlist'><IoIosHeartEmpty className='heart' /></Link>
 
       <div className="basket-wrapper">

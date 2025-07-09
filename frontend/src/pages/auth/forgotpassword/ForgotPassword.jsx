@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import {toast} from 'react-toastify'
 import axios from "axios";
 import { forgotschema } from "../../../schemas/ForgotSchema";
+import { Helmet } from "react-helmet";
 
 const ForgotPassword = () => {
   const baseUrl = `http://localhost:5000/auth`;
@@ -34,6 +35,11 @@ const ForgotPassword = () => {
   });
 
   return (
+   <>
+    <Helmet>
+        <title>Forgot Password</title>
+        <meta name="description" content="Forgot Password application" />
+    </Helmet>
     <div className="container">
       <form
         action=""
@@ -63,6 +69,7 @@ const ForgotPassword = () => {
         </button>
       </form>
     </div>
+   </>
   );
 };
 

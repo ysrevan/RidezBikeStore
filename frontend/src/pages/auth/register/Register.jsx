@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Button from '../../../components/utils/Button';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Register() {
   const submitForm = async (values, action) => {
@@ -23,7 +24,7 @@ function Register() {
     try {
       await axios.post(`${baseUrl}/register`, formData);
       action.resetForm();
-      toast.success("Regiser successfully please check email");
+      toast.success("Register successfully, please check your email");
     } catch (err) {
       toast.error(`${err.response?.data?.message || "Xəta baş verdi!"}`);
     }
@@ -51,75 +52,86 @@ function Register() {
   });
 
   return (
-    <div className="register-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit} noValidate>
-        <input
-          type="file"
-          name="image"
-          onChange={(e) => setFieldValue("image", e.target.files[0])}
-        />
-        {errors.image && touched.image && <div className="error">{errors.image}</div>}
+    <>
+      <Helmet>
+        <title>Register</title>
+        <meta name="description" content="Register application" />
+      </Helmet>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={values.name}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.name && touched.name && <div className="error">{errors.name}</div>}
+      <div className="register-page">
+        <div className="register-container">
+          <h2>Register</h2>
+          <form onSubmit={handleSubmit} noValidate>
+            <input
+              id="image"
+              type="file"
+              name="image"
+              className="file-input"
+              onChange={(e) => setFieldValue("image", e.target.files[0])}
+            />
+            {errors.image && touched.image && <div className="error">{errors.image}</div>}
 
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={values.username}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.username && touched.username && <div className="error">{errors.username}</div>}
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={values.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.name && touched.name && <div className="error">{errors.name}</div>}
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={values.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.email && touched.email && <div className="error">{errors.email}</div>}
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={values.username}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.username && touched.username && <div className="error">{errors.username}</div>}
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={values.password}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.password && touched.password && <div className="error">{errors.password}</div>}
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.email && touched.email && <div className="error">{errors.email}</div>}
 
-        <input
-          type="password"
-          name="confirmPassword"
-          placeholder="ConfirmPassword"
-          value={values.confirmPassword}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.confirmPassword && touched.confirmPassword && (
-          <div className="error">{errors.confirmPassword}</div>
-        )}
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.password && touched.password && <div className="error">{errors.password}</div>}
 
-        <Button className="register-btn" type="submit">Register</Button>
-      </form>
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              value={values.confirmPassword}
+              onChange={handleChange}
+              onBlur={handleBlur}
+            />
+            {errors.confirmPassword && touched.confirmPassword && (
+              <div className="error">{errors.confirmPassword}</div>
+            )}
 
-      <p className="text-center mt-4">
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
-    </div>
+            <Button className="register-btn" type="submit">Register</Button>
+          </form>
+
+          <p className="text-center mt-4">
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
+        </div>
+      </div>
+    </>
   );
 }
 

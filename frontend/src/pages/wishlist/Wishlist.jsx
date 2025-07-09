@@ -5,18 +5,23 @@ import { fetchWishlist, removeWishlist, clearWishlist } from '../../redux/wishli
 import { FaHeart } from "react-icons/fa6"
 import Button from '../../components/utils/Button'
 import Wishlistpage from '../../components/pageheader/Wishlistpage'
+import { Helmet } from 'react-helmet'
 
 function Wishlist() {
   const { wishlist } = useSelector((state) => state.wishlist)
   const dispatch = useDispatch()
 
-  // İlk render zamanı wishlist-i backend-dən gətir
+  
   useEffect(() => {
     dispatch(fetchWishlist())
   }, [dispatch])
 
   return (
     <>
+     <Helmet>
+        <title>Wishlist</title>
+        <meta name="description" content="Wishlist application" />
+    </Helmet>
       <Wishlistpage />
       <section id='wishlist'>
         <div className="mycontainer">

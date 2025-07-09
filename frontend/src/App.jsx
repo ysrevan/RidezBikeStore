@@ -18,9 +18,24 @@ import ForgotPassword from './pages/auth/forgotpassword/ForgotPassword'
 import Resetpassword from './pages/auth/resetpassword/Resetpassword'
 import Admin from './pages/admin/Admin'
 import AdminBlog from './pages/admin/AdminBlog'
+import NotFoundPage from './pages/notfoundpage/NotFoundPage'
+import Checkout from './pages/checkout/Checkout'
+import Profile from './pages/auth/profile/Profile'
 
 function App() {
   const router = createBrowserRouter([
+    {
+      path: '*',
+      element: <NotFoundPage />
+    },
+    {
+      path: '/login',
+      element: <Login />
+    },
+    {
+      path: '/register',
+      element: <Register />
+    },
    
     {
       path: '/',
@@ -62,14 +77,7 @@ function App() {
           path: 'productdetail/:id',
           element: <ProductDetail />
         },
-        {
-          path: '/login',
-          element: <Login />
-        },
-        {
-          path: '/register',
-          element: <Register />
-        },
+        
         {
           path: "/forgotpassword",
           element: <ForgotPassword />,
@@ -85,6 +93,14 @@ function App() {
         {
           path: "/adminblog",
           element: <AdminBlog />,
+        },
+        {
+          path: "/checkout",
+          element: <Checkout />,
+        },
+        {
+          path: "/profile",
+          element: <Profile />,
         },
       ]
     }

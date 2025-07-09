@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { resetschema } from "../../../schemas/ResetSchema";
 import {toast} from 'react-toastify'
+import { Helmet } from "react-helmet";
 
 const Resetpassword = () => {
   const baseUrl = `http://localhost:5000/auth`;
@@ -44,6 +45,11 @@ const Resetpassword = () => {
   });
 
   return (
+    <>
+    <Helmet>
+        <title>Reset Password</title>
+        <meta name="description" content="Reset Password application" />
+    </Helmet>
     <div className="container">
       <form
         className="form"
@@ -85,6 +91,7 @@ const Resetpassword = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 

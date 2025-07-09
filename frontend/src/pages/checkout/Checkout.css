@@ -1,0 +1,84 @@
+.checkout-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  .checkout-container {
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .checkout-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .checkout-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkout-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .checkout-form input:focus {
+    border-color: #fe5915;
+    outline: none;
+  }
+  
+  .checkout-form h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .row .cardcvv {
+    flex: 1;
+    width: 100px;
+  }
+  
+ 
+  
+  
+  .checkout-btn {
+    padding: 12px;
+    background-color: #fe5915;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #cc480f;
+  }
+  
+  
+   .small-error {
+    flex: 1;
+    font-size: 12px;
+    margin-top: -10px;
+    color: red;
+  }

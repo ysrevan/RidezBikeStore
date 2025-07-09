@@ -9,6 +9,7 @@ import Button from '../../components/utils/Button'
 import { addBasket, decrement, increment } from '../../redux/basketSlice'
 import ProductDetailpage from '../../components/pageheader/ProductDetailpage'
 import { fetchBasket } from '../../redux/basketSlice'
+import { Helmet } from 'react-helmet'
 
 
 function ProductDetail() {
@@ -40,6 +41,10 @@ function ProductDetail() {
 
   return (
     <>
+     <Helmet>
+        <title>Product Detail</title>
+        <meta name="description" content="Product Detail application" />
+    </Helmet>
       <ProductDetailpage />
       <section id='productdetail'>
         <div className="mycontainer">

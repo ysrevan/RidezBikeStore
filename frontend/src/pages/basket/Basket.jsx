@@ -11,10 +11,13 @@ import emptybasket from '../../assets/images/shopping_cart_clip_art_preview.webp
 import Button from '../../components/utils/Button'
 import Basketpage from '../../components/pageheader/Basketpage'
 import './Basket.css'
+import { Helmet } from 'react-helmet'
+import { useNavigate } from 'react-router-dom'; 
 
 function Basket() {
   const { basket, loading } = useSelector((state) => state.basket)
   const dispatch = useDispatch()
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchBasket())
@@ -27,6 +30,10 @@ function Basket() {
 
   return (
     <>
+      <Helmet>
+        <title>Basket</title>
+        <meta name="description" content="Basket application" />
+      </Helmet>
       <Basketpage />
       <section id='basket'>
         <div className="mycontainer">
@@ -48,27 +55,33 @@ function Basket() {
                         <p>Price: ${(item.count * item.productId.price).toFixed(2)}</p>
                         <div className="basketactions">
                           <button disabled={item.count === 1} onClick={async () => {
-                            await dispatch(decrement(item.productId)).unwrap()
-                            dispatch(fetchBasket())
+                            await dispatch(decrement(item.productId)).unwrap();
+                            dispatch(fetchBasket());
                           }}>-</button>
                           <span>{item.count}</span>
                           <button onClick={async () => {
-                            await dispatch(increment(item.productId)).unwrap()
-                            dispatch(fetchBasket())
+                            await dispatch(increment(item.productId)).unwrap();
+                            dispatch(fetchBasket());
                           }}>+</button>
                         </div>
                       </div>
                       <Button className='removebtn' onClick={async () => {
-                        await dispatch(removeBasket(item.productId)).unwrap()
-                        dispatch(fetchBasket())
+                        await dispatch(removeBasket(item.productId)).unwrap();
+                        dispatch(fetchBasket());
                       }}>Remove</Button>
                     </div>
                   )
                 )}
-                <Button className='clearbasket' onClick={async () => {
-                  await dispatch(clearBasket()).unwrap()
-                  dispatch(fetchBasket())
-                }}>Clear All</Button>
+                <div className="basket-actions-bottom">
+                  <Button className='clearbasket' onClick={async () => {
+                    await dispatch(clearBasket()).unwrap();
+                    dispatch(fetchBasket());
+                  }}>Clear All</Button>
+
+                  <Button className='checkoutbtn' onClick={() => navigate('/checkout')}>
+                    Proceed to Checkout
+                  </Button>
+                </div>
               </>
             )}
           </div>
