@@ -101,3 +101,31 @@ input[type="password"]:focus,
 .mt-4 {
   margin-top: 16px;
 }
+
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input[type="password"],
+.password-input-wrapper input[type="text"] {
+  padding-right: 40px;
+  flex: 1;
+}
+
+.password-input-wrapper .registereye {
+  position: absolute;
+  right: 12px;
+  bottom: 20px;
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.password-input-wrapper .registereye:hover {
+  color: #fe5915;
+}

@@ -99,3 +99,30 @@ input[type="password"]:focus,
 .forgot-link a:hover {
   text-decoration: underline;
 }
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input[type="password"],
+.password-input-wrapper input[type="text"] {
+  padding-right: 40px; 
+  flex: 1;
+}
+
+.password-input-wrapper .logineye {
+  position: absolute;
+  right: 12px;
+  bottom: -3px;
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+  user-select: none; 
+  transition: color 0.3s;
+}
+
+.password-input-wrapper .logineye:hover {
+  color: #fe5915; 
+}

@@ -8,6 +8,7 @@ import { setUser } from '../../redux/userSlice';
 import axios from 'axios';
 import {toast} from 'react-toastify'
 import { FaRegUser } from "react-icons/fa6";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 function Wrapper() {
   const baseUrl = "http://localhost:5000/auth"
@@ -64,8 +65,16 @@ function Wrapper() {
         <Link to='/basket'><GrBasket className='basket' /></Link>
         <span className='basket-count'>{basketcount}</span>
       </div>
+
+      
+<RxHamburgerMenu  className='burger'/>
+
+
+
     </div>
   )
 }
 
 export default Wrapper;
+
+

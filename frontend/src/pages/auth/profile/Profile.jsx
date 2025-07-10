@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import './Profile.css' 
+import { Helmet } from 'react-helmet';
+
 
 const Profile = () => {
   const { user } = useSelector((state) => state.user)
@@ -10,6 +12,11 @@ const Profile = () => {
   }
 
   return (
+   <>
+    <Helmet>
+    <title>Profile</title>
+    <meta name="description" content="Profile application" />
+  </Helmet>
     <div className="profile-container">
       <h1 className='profile'>Profile</h1>
       <div className="profile-header">
@@ -26,6 +33,7 @@ const Profile = () => {
         </div>
       </div>
     </div>
+   </>
   )
 }
 

@@ -30,6 +30,7 @@
 
 .emailtext textarea{
    resize: none;
+   height: 250px;
    font-size: 15px;
    padding-left: 10px;
    padding-top: 10px;
@@ -42,6 +43,7 @@
     color: #fff;
     border: none;
     transition: .4s;
+    margin-top: 20px;
 }
 
 .submitbtn:hover{

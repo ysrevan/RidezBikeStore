@@ -1,10 +1,10 @@
-.wrapper-box{
+ .wrapper-box{
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.user ,.heart , .basket{
+.user ,.heart , .basket, .burger{
     color: #fff;
     font-size: 20px;
     transition: .4s;
@@ -22,6 +22,10 @@
 
 .basket:hover{
     color: #fe5915;
+}
+
+.burger:hover{
+  color: #fe5915;
 }
 
 .basket-wrapper {
@@ -81,4 +85,6 @@
   .dropdown-menu a:hover {
     background-color: #f2f2f2;
   }
-  
+
+
+   
