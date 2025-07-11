@@ -66,7 +66,6 @@
     background-color: #000;
   }
 
-  /* 1024px və aşağı */
 @media (max-width: 1024px) {
   #newsletter-section {
     height: auto;
@@ -104,7 +103,7 @@
   }
 }
 
-/* 600px və aşağı */
+
 @media (max-width: 600px) {
   #newsletter-section {
     height: auto;

@@ -5,6 +5,9 @@ import './Contactemail.css';
 import Button from '../utils/Button';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux'; 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function Contactemail() {
   const formRef = useRef();
@@ -33,11 +36,19 @@ function Contactemail() {
     });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
+
   return (
     <section id='contactemail'>
       <div className="mycontainer">
         <div className="contactemailbox">
-          <div className="emailbox">
+        <div data-aos="fade-right">
+        <div className="emailbox">
             <div className="emailtext">
               <h1 className='sendmessage'>Send us a Message</h1>
               <p>If you have any questions or need more information, please use the form below to send us a message.</p>
@@ -50,10 +61,15 @@ function Contactemail() {
               </form>
             </div>
           </div>
+        </div>
 
+          <div data-aos="fade-left">
           <div className="emailimagebox">
             <img src={contactemailimg} alt="Contact" />
           </div>
+          </div>
+
+         
         </div>
       </div>
     </section>

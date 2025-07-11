@@ -65,10 +65,12 @@ function Admin() {
   return (
     <section id='admin'>
       <div className="mycontainer">
-        <Button onClick={() => { setShowModal(true); setEditingProduct(null); formik.resetForm(); }}>
+      <div className="productadminbtn">
+      <Button className="productaddbtn" onClick={() => { setShowModal(true); setEditingProduct(null); formik.resetForm(); }}>
           <FaPlus /> Add Product
         </Button>
         <Link to="/adminblog" className="admin-link-button">Manage Blogs</Link>
+      </div>
 
         <div className="adminproductsbox">
           <table className="table">
@@ -92,8 +94,8 @@ function Admin() {
                     <td>{p.description.slice(0, 30)}...</td>
                     <td>${p.price}</td>
                     <td>
-                      <button onClick={() => handleEdit(p)}><FaEdit /></button>
-                      <button onClick={() => handleDelete(p._id)}><FaTrash /></button>
+                      <Button className='edit-btn' onClick={() => handleEdit(p)}><FaEdit /></Button>
+                      <Button className='delete-btn' onClick={() => handleDelete(p._id)}><FaTrash /></Button>
                     </td>
                   </tr>
                 ))

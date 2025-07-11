@@ -53,7 +53,7 @@ function BlogModal({ title, onClose, formik }) {
             <div className="error">{formik.errors.image}</div>
           )}
 
-          <button type="submit">Submit</button>
+          <button className='adminsubmit' type="submit">Submit</button>
           <button type="button" className="cancel-btn" onClick={onClose}>Cancel</button>
         </form>
       </div>

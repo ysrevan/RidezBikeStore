@@ -129,7 +129,7 @@
   color: #fff;
 }
 
-/* 1024px və aşağı */
+
 @media (max-width: 1024px) {
     #footer-area {
       height: auto;
@@ -212,7 +212,7 @@
     }
   }
   
-  /* 600px və aşağı */
+  
   @media (max-width: 600px) {
     #footer-area {
       height: auto;

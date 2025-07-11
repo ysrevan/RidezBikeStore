@@ -1,18 +1,44 @@
- .list{
+.list {
     display: flex;
     gap: 30px;
-}
-
-.list li{
+  }
+  
+  .list li {
     font-size: 16px;
     color: #fff;
-    transition: .4s;
-}
-
-.list li:hover{
+    transition: 0.4s;
+  }
+  
+  .list li:hover {
     color: #fe5915;
-} 
-
-
-
+  }
+  
+  
+  @media (max-width: 600px) {
+    .list {
+      display: none; 
+      flex-direction: column;
+      gap: 15px;
+      background-color: #222;
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      z-index: 999;
+    }
+    .list.open {
+      display: flex; 
+    }
+  
+    .list li {
+      font-size: 18px;
+      color: #fff;
+    }
+  
+    
+    .user, .heart, .basket, .basket-count, .user-dropdown {
+      display: none;
+    }
+  }
   

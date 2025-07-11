@@ -2,22 +2,33 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getBlogs } from '../../redux/blogSlice'
 import './Blognews.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Blognews() {
 
     let {blogs} = useSelector((state)=>state.blogs)
 
     let dispatch = useDispatch()
 
-    useEffect(()=>{
-       dispatch(getBlogs())
-    },[dispatch])
+
+    useEffect(() => {
+      dispatch(getBlogs());
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, [dispatch]);
+
+ 
 
    
     
   return (
     <section id='blognew'>
       <div className="mycontainer">
-        <div className="blognewsbox">
+      <div data-aos="fade-up">
+      <div className="blognewsbox">
           {
             blogs && blogs.map((blog)=>(
               <div className="blognew" key={blog._id}>
@@ -34,6 +45,8 @@ function Blognews() {
             ))
           }
         </div>
+      </div>
+      
       </div>
     </section>
   )

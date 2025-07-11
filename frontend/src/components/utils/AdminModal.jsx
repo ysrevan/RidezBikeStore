@@ -7,7 +7,7 @@ function AdminModal({ title, onClose, formik }) {
       <div className="modal-content">
         <h2>{title}</h2>
         <form onSubmit={formik.handleSubmit}>
-          {/* Title */}
+         
           <input
             name="title"
             value={formik.values.title}
@@ -19,7 +19,7 @@ function AdminModal({ title, onClose, formik }) {
             <div className="error">{formik.errors.title}</div>
           )}
 
-          {/* Price */}
+        
           <input
             name="price"
             type="number"
@@ -32,7 +32,6 @@ function AdminModal({ title, onClose, formik }) {
             <div className="error">{formik.errors.price}</div>
           )}
 
-          {/* Category */}
           <input
             name="category"
             value={formik.values.category}
@@ -44,7 +43,7 @@ function AdminModal({ title, onClose, formik }) {
             <div className="error">{formik.errors.category}</div>
           )}
 
-          {/* Description */}
+        
           <textarea
             name="description"
             value={formik.values.description}
@@ -56,7 +55,6 @@ function AdminModal({ title, onClose, formik }) {
             <div className="error">{formik.errors.description}</div>
           )}
 
-          {/* Image */}
           <input
             name="image"
             type="file"
@@ -69,8 +67,8 @@ function AdminModal({ title, onClose, formik }) {
             <div className="error">{formik.errors.image}</div>
           )}
 
-          {/* Buttons */}
-          <button type="submit">Submit</button>
+        
+          <button className='adminsubmit' type="submit">Submit</button>
           <button type="button" className="cancel-btn" onClick={onClose}>Cancel</button>
         </form>
       </div>

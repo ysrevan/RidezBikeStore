@@ -19,7 +19,7 @@ function HomeBestproducts() {
 
   useEffect(() => {
     dispatch(getHomeProducts());
-    dispatch(fetchWishlist()); // Wishlist-i də ilkin yüklə
+    dispatch(fetchWishlist()); 
   }, [dispatch]);
 
   const handleAddWishlist = async (product) => {

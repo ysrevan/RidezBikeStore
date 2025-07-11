@@ -4,6 +4,7 @@ import {toast} from 'react-toastify'
 import axios from "axios";
 import { forgotschema } from "../../../schemas/ForgotSchema";
 import { Helmet } from "react-helmet";
+import "./ForgotPassword.css"
 
 const ForgotPassword = () => {
   const baseUrl = `http://localhost:5000/auth`;
@@ -40,35 +41,34 @@ const ForgotPassword = () => {
         <title>Forgot Password</title>
         <meta name="description" content="Forgot Password application" />
     </Helmet>
-    <div className="container">
-      <form
-        action=""
-        className="form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit();
-        }}
-      >
-        <h3>ForgotPassword</h3>
+    <div className="forgot-page">
+  <div className="forgot-container">
+    <form
+      className="form"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSubmit();
+      }}
+    >
+      <h3>Forgot Password</h3>
 
-        <div className="form-group">
-          <label htmlFor="username">Email</label>
-          <div className="text-danger">{errors.email}</div>
-          <input
-            placeholder="Enter your email"
-            type="text"
-            id="email"
-            name="email"
-            className="form-control"
-            onChange={handleChange}
-            value={values.email}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Send
-        </button>
-      </form>
-    </div>
+      <div className="form-group">
+        <div className="text-danger">{errors.email}</div>
+        <input
+          placeholder="Enter your email"
+          type="text"
+          id="email"
+          name="email"
+          onChange={handleChange}
+          value={values.email}
+        />
+      </div>
+      <button type="submit" className="btn-primary">
+        Send
+      </button>
+    </form>
+  </div>
+</div>
    </>
   );
 };

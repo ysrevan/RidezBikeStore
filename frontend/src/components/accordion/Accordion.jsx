@@ -1,5 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Accordion.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const faqData = [
   {
@@ -40,8 +44,16 @@ function Accordion() {
     setActiveIndex(prevIndex => (prevIndex === index ? null : index));
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
+
   return (
-    <div className="accordion-box">
+    <div data-aos="fade-down">
+         <div className="accordion-box">
     <div className="mycontainer">
       
        {faqData.map((item, index) => (
@@ -71,6 +83,8 @@ function Accordion() {
       ))}
        </div>
     </div>
+    </div>
+ 
   );
 }
 

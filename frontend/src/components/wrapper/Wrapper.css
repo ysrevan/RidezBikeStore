@@ -1,54 +1,46 @@
- .wrapper-box{
+
+   .wrapper-box {
     display: flex;
-    gap: 10px;
     align-items: center;
-}
-
-.user ,.heart , .basket, .burger{
-    color: #fff;
-    font-size: 20px;
-    transition: .4s;
-}
-
-
-
-.user:hover{
-    color: #fe5915;
-}
-
-.heart:hover{
-    color: #fe5915;
-}
-
-.basket:hover{
-    color: #fe5915;
-}
-
-.burger:hover{
-  color: #fe5915;
-}
-
-.basket-wrapper {
+    justify-content: space-between;
+    gap: 20px;
     position: relative;
-    display: inline-block;
-}
-
-.basket-count {
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .user, .heart, .basket {
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .user:hover, .heart:hover, .basket:hover {
+    color: #fe5915;
+  }
+  
+  .basket-wrapper {
+    position: relative;
+  }
+  
+  .basket-count {
     position: absolute;
     top: -8px;
     right: -10px;
-    background-color: #FE5915;
+    background: #fe5915;
     color: white;
-    font-size: 15px;
-    padding: 2px 5px;
+    font-size: 13px;
+    padding: 2px 6px;
     border-radius: 50%;
     font-weight: bold;
-}
-
-
-.user-dropdown {
+  }
+  
+  .user-dropdown {
     position: relative;
-    display: inline-block;
   }
   
   .user-btn {
@@ -57,10 +49,9 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    padding: 8px 14px;
+    padding: 6px 12px;
     border-radius: 6px;
   }
-  
   
   .dropdown-menu {
     position: absolute;
@@ -79,12 +70,86 @@
     padding: 8px 12px;
     text-decoration: none;
     color: #333;
-    font-size: 20px;
+    font-size: 14px;
   }
   
   .dropdown-menu a:hover {
     background-color: #f2f2f2;
   }
-
-
-   
+  
+  .burger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+ 
+  @media (max-width: 600px) {
+    .icon-wrapper,
+    .user-dropdown {
+      display: none;
+    }
+  
+    .burger {
+      display: block;
+    }
+  
+    .mobile-menu {
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      z-index: 1000;
+      width: 230px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .mobile-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .mobile-list li a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+    }
+  
+    .mobile-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .mobile-icons a,
+    .mobile-icons button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      text-align: left;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  
+    .logout-btn {
+      color: #fe5915;
+      font-weight: bold;
+    }
+  
+    .mobile-icons a:hover,
+    .mobile-icons button:hover {
+      color: #fe5915;
+    }
+  }
+  
+  

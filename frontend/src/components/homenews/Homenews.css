@@ -52,7 +52,106 @@
   .rightnewsone,.rightnewstwo,.rightnewsthree,.rightnewsfour{
     display: flex;
     align-items: center;
-   
+    justify-content: space-between;
   }
 
-  
+
+@media (max-width: 1024px) {
+  #homenews {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+
+  .newsbox {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .leftnewsphotobox {
+    width: 90%;
+    height: auto;
+  }
+
+  .leftnews .leftnewsphotobox h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .leftnews .leftnewsphotobox p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .rightnews {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .rightnewsone,
+  .rightnewstwo,
+  .rightnewsthree,
+  .rightnewsfour {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 200px;
+  }
+
+  .rightnewsphotobox {
+    width: 100%;
+    height: auto;
+  }
+
+  .latest {
+    font-size: 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #homenews {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  .latest {
+    font-size: 32px;
+  }
+
+  .leftnewsphotobox {
+    width: 100%;
+    height: auto;
+  }
+
+  .leftnews .leftnewsphotobox h1 {
+    font-size: 22px;
+  }
+
+  .leftnews .leftnewsphotobox p {
+    font-size: 14px;
+  }
+
+  .rightnews {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rightnewsone,
+  .rightnewstwo,
+  .rightnewsthree,
+  .rightnewsfour {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rightnewsphotobox {
+    width: 100%;
+    height: auto;
+  }
+}

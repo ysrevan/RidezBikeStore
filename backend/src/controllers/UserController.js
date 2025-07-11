@@ -47,7 +47,7 @@ export const register = async (req, res) => {
     recieveMail(newUser, confirmLink);
 
     return res.status(201).json({
-      message: "İstifadəçi uğurla yaradıldı",
+      message: "User ceated successfully",
       newUser,
     });
   } catch (error) {
@@ -97,16 +97,16 @@ export const login = async (req, res) => {
   });
 };
 
-import Wishlist from "../models/WishlistModel.js" // bunu yuxarıda import et
+import Wishlist from "../models/WishlistModel.js" 
 
 export const logout = async (req, res) => {
   try {
     const token = req.cookies.token;
-    console.log("LOGOUT TOKEN:", token);  // <--- bunu yaz
+    console.log("LOGOUT TOKEN:", token);  
 
     if (token) {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      console.log("DECODED ID:", decoded.id);  // <--- bunu da yaz
+      console.log("DECODED ID:", decoded.id);  
 
       await Basket.findOneAndUpdate({ user: decoded.id }, { products: [] });
       await Wishlist.findOneAndUpdate({ user: decoded.id }, { products: [] });

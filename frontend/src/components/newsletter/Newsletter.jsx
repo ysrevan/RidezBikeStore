@@ -3,8 +3,17 @@ import './Newsletter.css'
 import letterphotoone from '../../assets/images/h1-banner9.png'
 import letterphototwo from '../../assets/images/h1-banner8.png'
 import Button from '../utils/Button'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function NewsLetter() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
   return (
     <section
       id="newsletter-section"
@@ -18,7 +27,8 @@ function NewsLetter() {
       </div>
 
 
-        <div className="righttext">
+      <div data-aos="fade-left">
+      <div className="righttext">
             <p className='newsletterparagraph'>NEWSLETTER</p>
             <h1 className='newsletterheader'>Subscribe Today and Get 10% Off your Order</h1>
             
@@ -27,6 +37,9 @@ function NewsLetter() {
             <Button className='subscribebutton'>SUBSCRIBE</Button>
         </div>
         </div>
+      </div>
+
+      
 
         
      </div>

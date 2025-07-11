@@ -118,7 +118,7 @@
     }
   }
   
-  /* 600px və aşağı */
+  
   @media (max-width: 600px) {
     #servicehome {
       height: auto;

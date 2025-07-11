@@ -57,3 +57,72 @@
   .aboutcontact:hover{
     background-color: #000;
   }
+
+
+@media (max-width: 1024px) {
+  .experiencebox {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .experiencetext {
+    width: 90%;
+    max-width: 500px;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .bicyclingexperience {
+    font-size: 44px;
+  }
+
+  .shopabout {
+    font-size: 16px;
+  }
+
+  .aboutcontact {
+    width: 140px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .experiencebox {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .experiencetext {
+    width: 100%;
+    padding: 0 15px;
+    gap: 25px;
+  }
+
+  .bicyclingexperience {
+    font-size: 32px;
+  }
+
+  .shopabout {
+    font-size: 14px;
+  }
+
+  .aboutcontact {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

@@ -22,7 +22,7 @@ export const addToWishlist = async (req, res) => {
 
     wishlist.products.push(productId);
     await wishlist.save();
-    await wishlist.populate("products"); // Əlavə: tam məhsul məlumatı üçün
+    await wishlist.populate("products"); 
 
     res.json({ products: wishlist.products });
   } catch (err) {

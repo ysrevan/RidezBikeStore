@@ -51,20 +51,17 @@
     color: #fff;
 }
 
-/* 675px .twocardkids,
-.twocardaccessories */
 
-/* 1024px və aşağı */
 @media (max-width: 1024px) {
     .twocards {
-      flex-direction: row; /* Yan yana göstər */
+      flex-direction: row;
       align-items: center;
       gap: 40px;
     }
   
     .twocardkids,
     .twocardaccessories {
-      width: 48%; /* İki kart yan yana */
+      width: 48%; 
       height: auto;
       padding: 80px 50px;
       background-size: cover;
@@ -91,7 +88,7 @@
     }
   }
   
-  /* 600px və aşağı */
+  
   @media (max-width: 600px) {
     .twocards {
       flex-direction: column;

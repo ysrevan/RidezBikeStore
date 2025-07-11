@@ -126,5 +126,112 @@
     font-size: 20px;
     color: #555;
   }
-  
-  
+
+@media (max-width: 1024px) {
+  .wishlistcard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wishlistcard img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .wishlistinfo {
+    width: 100%;
+  }
+
+  .wishlistinfo h3 {
+    font-size: 22px;
+  }
+
+  .wishlistinfo p {
+    font-size: 16px;
+  }
+
+  .wishlistactions {
+    justify-content: center;
+  }
+
+  .removebtn {
+    width: 130px;
+    padding: 10px 20px;
+  }
+
+  .totalpricebox h2 {
+    font-size: 24px;
+  }
+
+  .clearwishlist {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .emptywishlistbox p {
+    font-size: 18px;
+  }
+
+  .emptywishlistbox .emptywishlist {
+    font-size: 160px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .wishlistcard {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .wishlistcard img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wishlistinfo h3 {
+    font-size: 20px;
+  }
+
+  .wishlistinfo p {
+    font-size: 14px;
+  }
+
+  .wishlistactions button {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .wishlistactions span {
+    font-size: 14px;
+    width: 20px;
+  }
+
+  .removebtn {
+    padding: 8px 16px;
+    font-size: 14px;
+    width: 120px;
+  }
+
+  .totalpricebox h2 {
+    font-size: 22px;
+  }
+
+  .clearwishlist {
+    width: 120px;
+    font-size: 13px;
+  }
+
+  .emptywishlistbox .emptywishlist {
+    font-size: 120px;
+  }
+
+  .emptywishlistbox p {
+    font-size: 16px;
+  }
+}

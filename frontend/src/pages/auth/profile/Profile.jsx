@@ -21,10 +21,12 @@ const Profile = () => {
       <h1 className='profile'>Profile</h1>
       <div className="profile-header">
       <img
-  src={user.image ? `${import.meta.env.VITE_SERVER_URL}/${user.image}` : "https://via.placeholder.com/150"}
+  src={user.image ? `http://localhost:5000/${user.image}` : "https://via.placeholder.com/150"}
   alt="Profil şəkli"
   className="profile-photo"
 />
+
+
 
         <div className="profile-info">
           <p><strong>Name:</strong> {user.name || "Ad mövcud deyil"}</p>

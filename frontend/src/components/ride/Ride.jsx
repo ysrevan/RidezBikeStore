@@ -3,10 +3,23 @@ import './Ride.css'
 import { RxColorWheel } from "react-icons/rx";
 import { GiFullMotorcycleHelmet } from "react-icons/gi";
 import { LiaBicycleSolid } from "react-icons/lia";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
+
 
 function Ride() {
+ 
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+        once: true,     
+      });
+    }, []);
   return (
-    <section id='ride'>
+    <div data-aos="fade-down">
+      <section id='ride'>
         <div className="ride-text">
             <p className='startride'>YOUR RIDE START HERE</p>
             <h1 className='facilities'>Our Facilities & Features</h1>
@@ -43,6 +56,8 @@ function Ride() {
      
         
     </section>
+    </div>
+    
   )
 }
 

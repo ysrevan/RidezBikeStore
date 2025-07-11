@@ -93,6 +93,8 @@
 
 .searchsortbox{
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .search{
@@ -104,4 +106,105 @@
   outline: none;
   border-radius: 10px;
   font-size: 15px;
+}
+
+.sortbox{
+  display: flex;
+  gap: 10px;
+}
+
+
+.sortbtn{
+  padding: 5px 10px;
+  border-radius: 7px;
+  background-color: #fe5915;
+  border:none;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  .product-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .shopwishlistheart {
+    left: auto;
+    right: 20px;
+    font-size: 18px;
+  }
+
+  .searchsortbox {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .search {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .sortbox {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #shopproducts {
+    padding: 70px 0;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .shopwishlistheart {
+    right: 10px;
+    top: 15px;
+    font-size: 16px;
+  }
+
+  .add-btn {
+    width: 100%;
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .productcard-category,
+  .productcard-price {
+    font-size: 16px;
+  }
+
+  .searchsortbox {
+    padding: 0 10px;
+  }
+
+  .search {
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .sortbtn {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .page-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }

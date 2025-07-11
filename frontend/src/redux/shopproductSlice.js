@@ -93,6 +93,6 @@ export const productSlice = createSlice({
 })
 
 
-export const { extraReducers } = productSlice.actions
+export const { sortProductHigest,sortProductLowest } = productSlice.actions
 
 export default productSlice.reducer

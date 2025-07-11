@@ -49,3 +49,76 @@
 .submitbtn:hover{
     background-color: #000;
 }
+
+
+@media (max-width: 1024px) {
+    .contactemailbox {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .emailimagebox {
+      width: 90%;
+      max-width: 500px;
+      height: auto;
+    }
+  
+    .sendmessage {
+      font-size: 42px;
+      text-align: center;
+    }
+  
+    .emailtext {
+      width: 90%;
+      max-width: 600px;
+      align-items: center;
+    }
+  
+    .emailtext input,
+    .emailtext textarea {
+      width: 100%;
+      font-size: 15px;
+    }
+  
+    .submitbtn {
+      width: 120px;
+      height: 45px;
+      font-size: 15px;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    #contactemail {
+      padding-bottom: 60px;
+    }
+  
+    .emailimagebox {
+      width: 100%;
+      height: auto;
+    }
+  
+    .sendmessage {
+      font-size: 30px;
+    }
+  
+    .emailtext {
+      width: 100%;
+      padding: 0 15px;
+      gap: 25px;
+    }
+  
+    .emailtext input,
+    .emailtext textarea {
+      font-size: 14px;
+    }
+  
+    .submitbtn {
+      width: 100%;
+      max-width: 130px;
+      height: 45px;
+      font-size: 14px;
+    }
+  }
+  

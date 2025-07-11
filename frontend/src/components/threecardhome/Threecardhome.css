@@ -102,22 +102,18 @@
 }
 
 
-/* 450px   threecardone,
-.threecardtwo,
-.threecardthree */
 
-/* 1024px və aşağı */
 @media (max-width: 1024px) {
     .threecards {
-      flex-direction: row; /* default ola bilər, ya da lazım gələrsə dəyiş */
+      flex-direction: row; 
       align-items: center;
-      gap: 25px; /* biraz daha aralıq */
+      gap: 25px; 
     }
   
     .threecardone,
     .threecardtwo,
     .threecardthree {
-      width: 30%; /* 3 kart yan yana qalır */
+      width: 30%; 
       height: 320px;
       background-size: cover;
       background-position: center;
@@ -146,7 +142,7 @@
     }
   }
   
-  /* 600px və aşağı */
+
   @media (max-width: 600px) {
     .threecards {
       flex-direction: column;

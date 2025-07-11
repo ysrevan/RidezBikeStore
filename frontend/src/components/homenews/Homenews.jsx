@@ -49,7 +49,7 @@ function Homenews() {
                 <div className="rightnewsthree">
                 <div className="rightnewsonetext">
                         <p>December 17,2021 / By Admin</p>
-                        <h1>Top Reasons Why An E-Bike Great for...</h1>
+                        <h1>Top Reasons Why An E-Bike Great...</h1>
                     </div>
                 <div className="rightnewsphotobox">
                     <img src={rightnewsphoto3} alt="" />

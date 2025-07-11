@@ -62,6 +62,7 @@
     border-radius: 6px;
     background-color: #f0f0f0;
     cursor: pointer;
+
   }
   
   .basketactions span {
@@ -126,5 +127,124 @@
     font-size: 20px;
     color: #555;
   }
+
+  .basket-actions-bottom{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .checkoutbtn{
+    padding: 10px 15px;
+    background-color: #fe5915;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+  }
   
-  
+ 
+@media (max-width: 1024px) {
+  .basketcard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .basketcard img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .basketinfo {
+    width: 100%;
+  }
+
+  .basketinfo h3 {
+    font-size: 22px;
+  }
+
+  .basketinfo p {
+    font-size: 16px;
+  }
+
+  .basketactions {
+    justify-content: center;
+  }
+
+  .removebtn {
+    width: 130px;
+    padding: 10px 20px;
+  }
+
+  .totalpricebox h2 {
+    font-size: 24px;
+  }
+
+  .clearbasket {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .emptybasket p {
+    font-size: 18px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .basketcard {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .basketcard img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .basketinfo h3 {
+    font-size: 20px;
+  }
+
+  .basketinfo p {
+    font-size: 14px;
+  }
+
+  .basketactions button {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .basketactions span {
+    font-size: 14px;
+    width: 20px;
+  }
+
+  .removebtn {
+    padding: 8px 16px;
+    font-size: 14px;
+    width: 120px;
+  }
+
+  .totalpricebox h2 {
+    font-size: 22px;
+  }
+
+  .clearbasket {
+    width: 120px;
+    font-size: 13px;
+  }
+
+  .emptybasket img {
+    width: 160px;
+  }
+
+  .emptybasket p {
+    font-size: 16px;
+  }
+}
+ 

@@ -99,3 +99,85 @@
     border-radius: 7px;
     color: #fff;
   }
+
+
+@media (max-width: 1024px) {
+  .detail-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .detail-image,
+  .detail-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .detail-text h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .detail-text p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .detail-text .detailprice {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .detailwishlistheart {
+    top: 30px;
+    left: 90%;
+    transform: translateX(-50%);
+  }
+
+  .detailactions {
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .detail-box {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .detail-text h1 {
+    font-size: 24px;
+  }
+
+  .detail-text p {
+    font-size: 14px;
+  }
+
+  .detail-text .detailprice {
+    font-size: 18px;
+  }
+
+  .detailwishlistheart {
+    top: 20px;
+    left: 85%;
+    font-size: 18px;
+  }
+
+  .detailadd {
+    width: 150px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .detailcount {
+    gap: 15px;
+  }
+
+  .detailcount button {
+    width: 35px;
+    height: 28px;
+    font-size: 18px;
+  }
+}

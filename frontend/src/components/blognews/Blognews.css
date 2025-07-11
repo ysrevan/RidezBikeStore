@@ -44,3 +44,61 @@
 .new-desc{
     color: #888787;
 }
+
+
+
+@media (max-width: 1024px) {
+    .blognewimage {
+      width: 90%;
+      height: auto;
+    }
+  
+    .blognewtext {
+      width: 90%;
+    }
+  
+    .new-title {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .new-date {
+      text-align: center;
+    }
+  
+    .new-desc {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  
+  
+
+  @media (max-width: 600px) {
+    #blognew {
+      padding: 60px 0;
+    }
+  
+    .blognewimage {
+      width: 100%;
+      height: auto;
+    }
+  
+    .blognewtext {
+      width: 100%;
+      padding: 0 15px;
+    }
+  
+    .new-title {
+      font-size: 22px;
+    }
+  
+    .new-date {
+      font-size: 14px;
+    }
+  
+    .new-desc {
+      font-size: 14px;
+    }
+  }
+  

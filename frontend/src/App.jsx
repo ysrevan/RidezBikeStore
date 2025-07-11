@@ -36,6 +36,14 @@ function App() {
       path: '/register',
       element: <Register />
     },
+    {
+      path: "/forgotpassword",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/resetpassword",
+      element: <Resetpassword />,
+    },
    
     {
       path: '/',
@@ -78,14 +86,7 @@ function App() {
           element: <ProductDetail />
         },
         
-        {
-          path: "/forgotpassword",
-          element: <ForgotPassword />,
-        },
-        {
-          path: "/resetpassword",
-          element: <Resetpassword />,
-        },
+        
         {
           path: "/admin",
           element: <Admin />,

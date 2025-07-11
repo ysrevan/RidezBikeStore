@@ -2,11 +2,22 @@ import React from 'react'
 import servicehomeimg from '../../assets/images/h1-bannernew.jpg'
 import './Serviceshome.css'
 import Button from '../utils/Button'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 function Serviceshome() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      once: true,     
+    });
+  }, []);
   return (
     <section id="servicehome" style={{ backgroundImage: `url(${servicehomeimg})` }}>
        <div className="mycontainer">
+       <div data-aos="fade-right">
        <div className="servicehomebox">
         <p className='ride'>YOUR RIDE START HERE.</p>
         <h1>Bike Services & Repair</h1>
@@ -36,6 +47,8 @@ function Serviceshome() {
 
         <Button className="exploreproducts">EXPLORE PRODUCTS</Button>
       </div>
+       </div>
+       
        </div>
     </section>
   )

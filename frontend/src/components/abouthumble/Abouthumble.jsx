@@ -1,15 +1,31 @@
 import React from 'react'
 import './Abouthumble.css'
 import humbleimg from '../../assets/images/about_03.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 function Abouthumble() {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: true,     
+        });
+      }, []);
   return (
     <section id='abouthumble'>
         <div className="mycontainer">
         <div className="humblebox">
-            <div className="humbleimagebox">
+
+        <div data-aos="fade-right">
+        <div className="humbleimagebox">
                 <img src={humbleimg} alt="" />
             </div>
+        </div>
+            
 
+
+            <div data-aos="fade-left">
             <div className="humbletext">
                 <p className='story'>OUR STORY</p>
                 <h1 className='humblebeginning'>A Humble Beginning</h1>
@@ -22,6 +38,9 @@ function Abouthumble() {
                  84 years after the first intrepid cyclists battled on that oval of dirt, 
                 Trek broke ground on a new headquarters across the street.</p>
             </div>
+            </div>
+
+            
         </div>
         </div>
     </section>
