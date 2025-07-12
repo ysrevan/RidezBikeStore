@@ -5,7 +5,7 @@ import Ride from '../components/ride/Ride'
 import Twopicturehome from '../components/twopicturehome/Twopicturehome'
 import Fivepicturehome from '../components/fivepicturehome/Fivepicturehome'
 import Serviceshome from '../components/serviceshome/Serviceshome'
-import Newsletter from '../components/newsletter/NewsLetter'
+import Newsletter from '../components/newsletter/Newsletter'
 import Homenews from '../components/homenews/Homenews'
 import HomeBestproducts from '../components/homebestproducts/HomeBestproducts'
 import {Helmet} from "react-helmet";
