@@ -1,5 +1,5 @@
 import React from 'react'
-import './Twopicturehome.css'
+import './TwoPicturehome.css'
 import kidsbg from '../../assets/images/h1-banner4.jpg'
 import accessoriesbg from '../../assets/images/h1-banner5.jpg'
 import Button from '../utils/Button'
