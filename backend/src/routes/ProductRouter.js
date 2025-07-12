@@ -7,7 +7,7 @@ import {
   editProduct,
   getProducts,
   searchProduct,
-} from "../controllers/productController.js";
+} from "../controllers/ProductController.js";
 import upload from "../upload/upload.js";
 
 const productRouter = express.Router();
